@@ -64,7 +64,8 @@ mongodb+srv://vercel-admin-user:79wInWz1Luoxtq82@cluster0.rpimotu.mongodb.net/?r
 6、再次运行，提示：无result.html，从源代码拷贝到build文件下
 因为CRA是单页面，通常只包含一个 index.html 文件。这是因为 CRA 使用 React Router 或其他路由库来处理页面路由，webpack没有构建result.html结果页面。
 ---直接修改代码统一读取index.html页面进行渲染。（不行，会重定向到首页）
-只能将原版本的三个跟result相关的文件复制过来。
+只能将原版本的三个跟result相关的文件复制过来。——————@这就是CRA的弊端，单页面还不如手动配置多个页面的方便。
+
 顺利执行项目代码
 打版本v7.1.0
 启动方式：npm start

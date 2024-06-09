@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
     /* 默认浏览器会有间隙，需要赋值为空 */
     padding: 0;

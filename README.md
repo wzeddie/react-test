@@ -69,5 +69,14 @@ mongodb+srv://vercel-admin-user:79wInWz1Luoxtq82@cluster0.rpimotu.mongodb.net/?r
 顺利执行项目代码
 打版本v7.1.0
 启动方式：npm start
-# v7.2.0 下一步
-引入tailwind
+# v7.2.0 引入tailwind
+在原有react框架中引入tailwind--参考资料notion，通过react中加载tailwind，网址链接：https://tailwindcss.com/docs/guides/create-react-app
+最后步骤有出入，修改组件.js后需要重新构建npm run bulid，才能运行npm start看到效果
+——完成
+官方文档建议，建议使用 Vite、Parcel、Next.js 或 Remix 而不是 Create React App。它们提供同等或更好的开发人员体验。
+
+
+能否让CRA解析多个html页面。而不通过添加路由的方式。
+
+# v7.3.0 组件美化
+

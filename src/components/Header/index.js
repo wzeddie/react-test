@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Domain Name Information Inquiry</h1>
+      <h1 className="text-3xl font-bold underline">Domain Name Information Inquiry</h1>
     </header>
   );
 };

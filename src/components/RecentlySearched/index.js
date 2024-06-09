@@ -15,11 +15,14 @@ const RecentlySearched = ({ initialDomains, handleDomainClick }) => {
   };
 
   return (
-    <div style={{ textAlign: 'center', margin: '10px' }}>
-      <p style={{ display: 'inline' }}>Recently searched:</p>
+
+    <div class="flex items-center justify-between py-4">
+      <p class="text-sm text-gray-500  mx-auto">
+      Recently searched:
       {recentDomains.current.map((domain, index) => (
-        <a
-          key={index}
+        <a 
+        class="underline" href="#"
+        key={index}
           href=""
           // 添加 data-ssr 属性以标记客户端渲染的内容
           data-ssr="true"
@@ -31,10 +34,14 @@ const RecentlySearched = ({ initialDomains, handleDomainClick }) => {
             pointerEvents: isClickable ? 'auto' : 'none', // 设置不可点击时，禁用鼠标事件
            }}
           disabled={!isClickable}
-          >
+        >
           {domain}
-        </a>
-      ))}
+          </a>
+          ))}
+      </p>
+
+
+
     </div>
   );
 };

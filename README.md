@@ -80,3 +80,6 @@ mongodb+srv://vercel-admin-user:79wInWz1Luoxtq82@cluster0.rpimotu.mongodb.net/?r
 
 # v7.3.0 组件美化
 
+完成首页美化 
+推送并打包
+发现每次执行run后，result文件会被自动删除。

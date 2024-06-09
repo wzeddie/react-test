@@ -257,7 +257,7 @@ const server = http.createServer(async (req, res)=> {
                 //console.log('jsonString resolved with:', jsonString);
                 console.log('Bulk query results:', results);
                 //console.log('Bulk query results:', piliang_yuming_able);
-                let htmlString = await fs.promises.readFile(path.join(__dirname, '..', 'build', 'result.html'), 'utf-8');
+                let htmlString = await fs.promises.readFile(path.join(__dirname, '..', 'config','build', 'result.html'), 'utf-8');
                 const reactAppString = ReactDOMServer.renderToString(React.createElement(DomainInfo,{domainData: jsonString,
                     results: results }));//不能用jsx否则报错>
                 htmlString = htmlString.replace('<div id="root"></div>', `<div id="root">${reactAppString}</div>`);

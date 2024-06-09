@@ -107,3 +107,8 @@ src/result.js，结果页，赋值domainif代码
 2、手动构建多个入口：
 你可以手动创建多个入口文件，每个入口文件对应一个页面，并在构建时指定不同的输出目录。但这需要你对webpack配置有足够的了解。
 CRA 封装了 webpack 的配置，不允许直接修改 webpack 配置文件。需要 "eject" CRA，npm run eject，允许你自定义 webpack 配置。——参考6.0版本的手动安装react项目。
+
+拷贝了webpack.config.js 代码
+修改了server.js 加载result的目录，在config的bulid目录下
+修改了package.json的配置文件：babel，build部分等。
+    "build": "set NODE_ENV=production && webpack --config ./config/webpack.config.js",

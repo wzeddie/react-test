@@ -76,10 +76,34 @@ mongodb+srv://vercel-admin-user:79wInWz1Luoxtq82@cluster0.rpimotu.mongodb.net/?r
 官方文档建议，建议使用 Vite、Parcel、Next.js 或 Remix 而不是 Create React App。它们提供同等或更好的开发人员体验。
 
 
-能否让CRA解析多个html页面。而不通过添加路由的方式。
 
-# v7.3.0 组件美化
+# v7.3.0 从互联网上下载现在组件，利用tailwind美化
 
 完成首页美化 
 推送并打包
 发现每次执行run后，result文件会被自动删除。
+
+
+下一步
+熟悉tailwind的基本布局功能，组件的大小，长宽调整等。
+视频：
+# 如何通过CRA部署多个页面
+ 1、使用React Router进行页面路由：
+在React应用中，React Router是一个常用的库，用于在单页面应用（SPA）中实现页面路由。你可以在 index.js 中设置路由，然后使用 <Route> 组件来定义不同的页面组件。这样，虽然只有一个 index.html，但是用户可以通过URL访问不同的页面内容。
+npm install react-router-dom
+src/index.js，入口页
+src/app.js，路由配置
+src/homepage.js，首页，赋值main代码
+src/result.js，结果页，赋值domainif代码
+
+将配置文件修改回去：
+    //"start": "node src/server.js",
+
+重启后看路由是否生效
+只能对静态网站进行自动路由是有效的，动态网站不能这么路由
+保存备份。
+
+
+2、手动构建多个入口：
+你可以手动创建多个入口文件，每个入口文件对应一个页面，并在构建时指定不同的输出目录。但这需要你对webpack配置有足够的了解。
+CRA 封装了 webpack 的配置，不允许直接修改 webpack 配置文件。需要 "eject" CRA，npm run eject，允许你自定义 webpack 配置。——参考6.0版本的手动安装react项目。

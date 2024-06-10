@@ -108,7 +108,20 @@ src/result.js，结果页，赋值domainif代码
 你可以手动创建多个入口文件，每个入口文件对应一个页面，并在构建时指定不同的输出目录。但这需要你对webpack配置有足够的了解。
 CRA 封装了 webpack 的配置，不允许直接修改 webpack 配置文件。需要 "eject" CRA，npm run eject，允许你自定义 webpack 配置。——参考6.0版本的手动安装react项目。
 
-拷贝了webpack.config.js 代码
-修改了server.js 加载result的目录，在config的bulid目录下
-修改了package.json的配置文件：babel，build部分等。
-    "build": "set NODE_ENV=production && webpack --config ./config/webpack.config.js",
+拷贝了webpack.config.js 代码，并对原配置文件进行修改，原配置不适合CRA部署类型。
+修改配置了，能成功运行，后发现无法加载tailwind。
+npm install tailwindcss postcss postcss-loader autoprefixer
+修改原有tailwind配置文件
+并添加postcss.config.js
+更新你的 webpack.config.js 文件，使其包含 Tailwind CSS 配置：
+给webpack配置文件添加环境变量，
+首页可以正常运行并加载。
+对result页面添加css入口文件
+对服务器加载的组件要进行现成编译，修改代码之后，否则不能生效。
+$env:NODE_ENV="production"; npx babel src --out-dir lib --extensions ".js,.jsx"
+编译客户端组件
+npm run bulid
+启动服务器
+npm start
+
+# 保存版本 V7.4.0

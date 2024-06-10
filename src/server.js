@@ -8,6 +8,9 @@ const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 const DomainInfo  = require('../lib/components/DomainInfo').default; // 确保你导入了 DomainInfo 组件
 var piliang_yuming_able = {}
+//console.log('__dirname:', __dirname);
+//console.log('Calculated path:', path.join(__dirname, '..', 'build', 'result.html'));
+
 async function main(req, res) {
     const parsedUrl = url.parse(req.url, true);
     const reqPath = parsedUrl.pathname;
@@ -59,7 +62,9 @@ async function main(req, res) {
                 //console.log('jsonString resolved with:', jsonString);
                 console.log('Bulk query results:', results);
                 //console.log('Bulk query results:', piliang_yuming_able);
-                let htmlString = await fs.promises.readFile(path.join(__dirname, '..', 'build', 'result.html'), 'utf-8');
+                let htmlString = await fs.promises.readFile(path.join(__dirname,  '..','build', 'result.html'), 'utf-8');
+                //console.log('server__dirname:', __dirname);
+
                 const reactAppString = ReactDOMServer.renderToString(React.createElement(DomainInfo,{domainData: jsonString,
                     results: results }));//不能用jsx否则报错>
                 htmlString = htmlString.replace('<div id="root"></div>', `<div id="root">${reactAppString}</div>`);
@@ -257,7 +262,7 @@ const server = http.createServer(async (req, res)=> {
                 //console.log('jsonString resolved with:', jsonString);
                 console.log('Bulk query results:', results);
                 //console.log('Bulk query results:', piliang_yuming_able);
-                let htmlString = await fs.promises.readFile(path.join(__dirname, '..', 'config','build', 'result.html'), 'utf-8');
+                let htmlString = await fs.promises.readFile(path.join(__dirname, '..','build', 'result.html'), 'utf-8');
                 const reactAppString = ReactDOMServer.renderToString(React.createElement(DomainInfo,{domainData: jsonString,
                     results: results }));//不能用jsx否则报错>
                 htmlString = htmlString.replace('<div id="root"></div>', `<div id="root">${reactAppString}</div>`);

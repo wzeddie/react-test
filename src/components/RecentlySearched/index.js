@@ -16,12 +16,12 @@ const RecentlySearched = ({ initialDomains, handleDomainClick }) => {
 
   return (
 
-    <div class="flex items-center justify-between py-4">
-      <p class="text-sm text-gray-500  mx-auto">
+    <div className="flex items-center justify-between py-4">
+      <p className="text-sm text-gray-500  mx-auto">
       Recently searched:
       {recentDomains.current.map((domain, index) => (
         <a 
-        class="underline" href="#"
+        className="underline" href="#"
         key={index}
           href=""
           // 添加 data-ssr 属性以标记客户端渲染的内容

@@ -14,8 +14,8 @@ const DomainTable = ({ domainData, results }) => {
           <table className="min-w-full bg-white w-full">
             <thead className="whitespace-nowrap">
               <tr>
-                <th className="p-4 text-sm font-semibold bg-red-500 text-white text-center">Task List</th>
-                <th className="p-4 text-sm font-semibold bg-blue-500 text-white text-center">Status</th>
+                <th className="p-4 text-sm font-semibold bg-red-500 text-white text-center">Information</th>
+                <th className="p-4 text-sm font-semibold bg-blue-500 text-white text-center">Results</th>
               </tr>
             </thead>
             <tbody className="whitespace-nowrap divide-y divide-gray-200">

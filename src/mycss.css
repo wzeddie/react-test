@@ -1,32 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
-
-#info-table {
-    /* 默认隐藏表格 */
-    margin: 15px auto;
-    /* 居中表格 */
-    border-collapse: collapse;
-    /* 边框合并 */
-    width: 90%;
-    /* 表格宽度 */
-}
-
-#info-table th,
-#info-table td {
-    border: 1px solid #ddd;
-    /* 边框 */
-    padding: 8px;
-    /* 内边距 */
-    text-align: left;
-    /* 文本左对齐 */
-}
-
-#info-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-/* 偶数行背景色 */

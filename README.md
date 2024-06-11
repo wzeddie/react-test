@@ -117,7 +117,7 @@ npm install tailwindcss postcss postcss-loader autoprefixer
 给webpack配置文件添加环境变量，
 首页可以正常运行并加载。
 对result页面添加css入口文件
-对服务器加载的组件要进行现成编译，修改代码之后，否则不能生效。
+对服务器加载的组件,要进行现成编译，修改代码之后，否则不能生效。针对结果页的所有组件都要babel和run build
 $env:NODE_ENV="production"; npx babel src --out-dir lib --extensions ".js,.jsx"
 编译客户端组件
 npm run bulid
@@ -127,4 +127,4 @@ npm start
 # 保存版本 V7.4.0
 下一步 修复bug
 1、结果页，控制面板有报错
-2、结果页，插件组件的渲染美化。
+2、结果页，插件组件的渲染美化。 保存版本v7.4.1，结果页组件美化完成

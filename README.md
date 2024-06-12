@@ -1,7 +1,7 @@
 #  branch research for tailwind
 初始化脚手架react项目
 初始化git init
-管理员仓库 git remote add origin <remote-repository-URL>
+管理员仓库 git remote add origin <remote-repository-URL>，github对应远程仓库为react-test，分支选择master
 从远程仓库中拉取同步数据 git pull origin main
 推送到远程仓库 git push -u origin master
 
@@ -124,7 +124,9 @@ npm run bulid
 启动服务器
 npm start
 
-# 保存版本 V7.4.0
+#  保存版本 V7.4.0
 下一步 修复bug
 1、结果页，控制面板有报错，待解决
-2、结果页，插件组件的渲染美化。 保存版本v7.4.1，结果页组件美化完成
+2、结果页，插件组件的渲染美化。
+#  保存版本v7.4.1
+结果页组件美化完成

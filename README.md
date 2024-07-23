@@ -119,10 +119,17 @@ npm install tailwindcss postcss postcss-loader autoprefixer
 对result页面添加css入口文件
 对服务器加载的组件,要进行现成编译，修改代码之后，否则不能生效。针对结果页的所有组件都要babel和run build
 $env:NODE_ENV="production"; npx babel src --out-dir lib --extensions ".js,.jsx"
-编译客户端组件
-npm run bulid
+
+编译客户端组件，为什么要编译，需要将jsx，tss解析为js、css等浏览器认识的代码。
+
+
+
+运行服务器方式：
+npm run bulid,修改css，或者其他代码后，都需要先构建，才能生效。
 启动服务器
 npm start
+
+
 
 #  保存版本 V7.4.0
  修复bug
